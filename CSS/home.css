@@ -34,6 +34,39 @@
 .log-out-btn:hover {
   background: linear-gradient(45deg, rgba(255, 0, 0, 0.979), rgba(255, 0, 170, 0.973));
 }
+
+.logoutDiv {
+  display: none;
+   
+}
+
+.loginDiv{
+   display: flex; 
+}
+
+.createdClass .logoutDiv {
+  display: flex;
+  justify-content: end;
+}
+
+.createdClass .loginDiv {
+  display: none;
+}
+
+.profile-picture-js img{
+  width:25px;
+  height:25px;
+  border-radius:12px;
+}
+
+.postProfilePic {
+  width:25px;
+  height:25px;
+  border-radius:13px;
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
+
 /*Main Bar Ends Here*/
 
 
@@ -52,6 +85,16 @@ span {
   font-size: 13px
 }
 
+ .tags-css {
+  display: inline;
+  border: none 2px rgb(0, 0, 0);
+  background-color: rgb(85, 84, 84);
+  color: white;
+  border-radius: 10px;
+  padding: 1px 4px;
+  font-size: 13px;
+} 
+
 .user-name {
   font-size: 15px;
 }
@@ -68,6 +111,13 @@ span {
    .input-css:hover {
     border-color: rgba(0, 255, 98, 0.979);
     border-width: 2px;
+    background: linear-gradient(45deg, rgba(0, 255, 98, 0.979), rgba(0, 252, 252, 0.973));
+  }
+
+  .image-password-css {
+    border: solid 2px rgba(0, 255, 98, 0.979);;
+  }
+  .image-password-css:hover {
     background: linear-gradient(45deg, rgba(0, 255, 98, 0.979), rgba(0, 252, 252, 0.973));
   }
 /*Modals Ends Here*/

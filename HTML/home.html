@@ -14,23 +14,22 @@
 <body>
 
   <!--Main Bar Starts Here-->
-    <div class="container rounded col-4 d-flex flex-wrap align-items-center gap-2 mt-3 ">
+    <div class="container rounded col-11 d-flex flex-wrap align-items-center gap-2 mt-3 ">
     <div class="userNameLoggedIn-js">Tarmeez</div>
     <div class=" btn-link text-decoration-none">Home</div>
     <div class=" btn-link text-decoration-none">Profile</div>
-    <div class="d-flex ms-auto gap-2 p-2 align-items-center logged-in-js">
+    <div class="ms-auto gap-2 p-2 align-items-center loginDiv">
       <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn fs-6 p-1">Log-in</button>
-      <button class="btn fs-6 p-1">Register</button>
+      <button data-bs-toggle="modal" data-bs-target="#registerModal" 
+      class="btn fs-6 p-1">Register</button>
+    </div>
+    <div class="ms-auto p-2 align-items-center logoutDiv">
+      <div style="margin-right: 5px;" class="name-user-js"></div>
+      <div class="profile-picture-js" style="margin-right: 5px;"></div>
+      <button class="btn fs-6 p-1 log-out-btn" onclick="loggedOut()">Log-out</button>
     </div>
     </div>
   <!--Main Bar Ends Here-->
-
-  <!--This div is for new posts created only by users-->
-    <div class="new-post-js">
-
-    </div>
-  <!--//This div is for new posts created only by users//-->
-
 
   <!--Main Content Starts Here-->
     <div class="here-js">
@@ -67,13 +66,53 @@
         </div>
       </div>
     </div>
-    <div style="position: fixed; top: 0;" id="liveAlertPlaceholder">hi</div>
   <!--Login Modal ends here-->
+
+
+  <!-- Register Modal starts here -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">=
+              <label for="Name-name" class="col-form-label">Name:</label>
+              <input type="text" class="form-control register-name-js">
+            </div>
+            <div class="mb-3">
+              <label for="Username-name" class="col-form-label">Username:</label>
+              <input type="text" class="form-control register-username-js">
+            </div>
+            <div class="mb-3">
+              <label for="E-mail-name" class="col-form-label">E-mail:</label>
+              <input type="email" class="form-control register-email-js">
+            </div>
+            <div class="mb-3">
+              <label for="Password-name" class="col-form-label">Password:</label>
+              <input type="password" class="form-control register-password-js">
+            </div>
+            <div class="mb-3">
+              <label class="col-form-label">Profile-Picture: </label>
+              <input type="file" class="form-control image-password-js image-password-css">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn log-out-btn" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn" onclick="register()">Register Here!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Register Modal starts here -->
 
 
   <!--Create a post div starts here-->
     <div class="create-post-js create-post-css">
-      
     </div>
   <!--Create a post div ends here--> 
 
@@ -92,8 +131,11 @@
               <input type="text" class="form-control title-post-js" id="recipient-name">
             </div>
             <div class="mb-3">
-              <label for="message-text" class="col-form-label">Description</label>
-              <input type="text" class="form-control description-post-js" id="message-text">
+              <textarea name="Description: " class="description-post-js w-100 p-3"></textarea>
+            </div>
+            <div class="mb-3">
+              <label>Add an image:</label>
+              <input type="file" class="image-post-js">
             </div>
           </form>
         </div>
@@ -110,6 +152,7 @@
    </script>
    <script src="../node_modules/axios/dist/axios.min.js"></script>
    <script src="../JavaScript/home.js"></script>
-   <script src="../JavaScript/Log-in.js"></script>
+   
+   
 </body>
 </html>
