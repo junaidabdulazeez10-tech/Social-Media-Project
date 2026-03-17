@@ -5,8 +5,19 @@
 }
 
 
-.btn-link {
+.btn-link, .userNameLoggedIn-css {
   cursor: pointer;
+}
+
+.userNameLoggedIn-css {
+  cursor: pointer;
+}
+.userNameLoggedIn-css:hover {
+  opacity: 0.8;
+  color: rgb(1, 62, 133);
+}
+.userNameLoggedIn-css:active{
+  opacity: 1;
 }
 
 
@@ -59,6 +70,12 @@
   border-radius:12px;
 }
 
+.profile-picture-comment {
+  width:25px;
+  height:25px;
+  border-radius:12px;
+}
+
 .postProfilePic {
   width:25px;
   height:25px;
@@ -72,6 +89,7 @@
 
 
 /*Main Content Starts Here*/
+
 .time {
   font-size: 10px;
   color: rgb(100, 100, 100);
@@ -85,19 +103,40 @@ span {
   font-size: 13px
 }
 
- .tags-css {
-  display: inline;
-  border: none 2px rgb(0, 0, 0);
-  background-color: rgb(85, 84, 84);
-  color: white;
-  border-radius: 10px;
-  padding: 1px 4px;
-  font-size: 13px;
-} 
-
+ 
 .user-name {
   font-size: 15px;
 }
+
+.comment-display {
+  margin-top: 10px;
+  padding: 2px;
+  height: fit-content;
+}
+
+.add-comment {
+  display: flex;
+  height: 40px;
+  
+}
+
+.add-comment input {
+  flex: 5;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px
+}
+
+.add-comment input::placeholder {
+  padding: 10px
+}
+
+.add-comment button {
+  flex: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 /*Main Content Ends Here*/
 
 

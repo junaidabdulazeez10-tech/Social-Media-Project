@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="../CSS/home.css">
-
- 
-  <title>Home Page</title>
-
+  <title>Comment</title>
 </head>
-
 <body>
-
   <!--Main Bar Starts Here-->
     <div class="container rounded col-11 d-flex flex-wrap align-items-center gap-2 mt-3 ">
     <div class="userNameLoggedIn-js userNameLoggedIn-css">Tarmeez</div>
@@ -31,13 +25,24 @@
     </div>
   <!--Main Bar Ends Here-->
 
-  <!--Main Content Starts Here-->
-    <div class="here-js">
+  <!--comment name starts Here-->
+  <div class="comment-title-name container mt-5 mb-5">
+    
+  </div>
+  <!--comment name Ends Here-->
+
+   <!--Main Content Starts Here-->
+    <div class="comment-js">
+    
     </div>
   <!--Main Content Ends Here-->
-
   
-  <!--Login Modal starts here-->
+  <!--Create a post div starts here-->
+    <div class="create-post-js create-post-css">
+    </div>
+  <!--Create a post div ends here--> 
+
+   <!--Login Modal starts here-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -67,7 +72,6 @@
       </div>
     </div>
   <!--Login Modal ends here-->
-
 
   <!-- Register Modal starts here -->
   <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -110,50 +114,11 @@
   </div>
 <!-- Register Modal starts here -->
 
-
-  <!--Create a post div starts here-->
-    <div class="create-post-js create-post-css">
-    </div>
-  <!--Create a post div ends here--> 
-
-  <!--This Modal is for the new posts button-->
-  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel2">Create a new Post</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="recipient-name" class="col-form-label">Title</label>
-              <input type="text" class="form-control title-post-js" id="recipient-name">
-            </div>
-            <div class="mb-3">
-              <textarea name="Description: " class="description-post-js w-100 p-3"></textarea>
-            </div>
-            <div class="mb-3">
-              <label>Add an image:</label>
-              <input type="file" class="image-post-js">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button onclick="createNewPost()" type="button" class="btn btn-primary">Create Post</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--//This Modal is for the new posts button//-->
-
-   <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js">
-   </script>
-   <script src="../node_modules/axios/dist/axios.min.js"></script>
-   <script src="../JavaScript/home.js"></script>
-   <script src="../JavaScript/mainLogic.js"></script>
-   
-   
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js">
+</script>
+<script src="../node_modules/axios/dist/axios.min.js"></script>
+<script src="../JavaScript/mainLogic.js"></script>
+<script src="../JavaScript/comment.js"></script>
+  
 </body>
 </html>
